@@ -2,6 +2,13 @@
 
 - Still a work in progress
 
+Use these steps to run the project:
+:git clone https://github.com/Debasis56/Sorting-Visualizer
+:npm install (after navigating inside the directory)
+:npm fix audit
+:npm start
+
+
 ## Features
 :white_check_mark:  Control Visualization Speed<br><br>
 :white_check_mark:  Change array size (30 -> 400)<br><br>
