@@ -37,7 +37,7 @@ const Home = () => {
   const onRandomize = () => {
     if (isVisualizing) return;
     const nextRandomizedArray = generateRandomizedArray({
-      arraySize: randomizedArray.length,
+      arraySize: randomizedArray.length+20,
     });
     setRandomizedArray(nextRandomizedArray);
     setMaxItem(Math.max(...nextRandomizedArray));
