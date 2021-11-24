@@ -11,7 +11,7 @@ Use these steps to run the project:<br><br>
 
 ## Features
 :white_check_mark:  Control Visualization Speed<br><br>
-:white_check_mark:  Change array size (10 -> 50)<br><br>
+:white_check_mark:  Change array size (5 -> 40)<br><br>
 :white_check_mark:  Randomize Input<br><br>
 :white_check_mark:  Choose various algorithms<br><br>
 :wrench: Stop visualization<br><br>
