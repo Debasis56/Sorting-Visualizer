@@ -11,6 +11,8 @@ import mergeSortWrapper from '../../algorithms/merge-sort';
 import quickSortLWrapper from '../../algorithms/quick-sort-l';
 import quickSortLRWrapper from '../../algorithms/quick-sort-lr';
 import StartButton from '../HomeHeader/StartButton';
+import './Home.css'
+
 
 const Home = () => {
   const arraySize = 30;
@@ -37,7 +39,7 @@ const Home = () => {
   const onRandomize = () => {
     if (isVisualizing) return;
     const nextRandomizedArray = generateRandomizedArray({
-      arraySize: randomizedArray.length+20,
+      arraySize: randomizedArray.length,
     });
     setRandomizedArray(nextRandomizedArray);
     setMaxItem(Math.max(...nextRandomizedArray));
@@ -51,7 +53,7 @@ const Home = () => {
   };
   const onSpeedChange = (val) => {
     if (isVisualizing) return;
-    setVisualizationSpeed(80 - val + 1);
+    setVisualizationSpeed(val);
   };
 
   const onVisualize = async () => {
@@ -67,9 +69,10 @@ const Home = () => {
           visualizationSpeed: visualizationSpeed,
           setColorsArray: setColorsArray,
         });
-        break;
+  break;
 
       case 'Bubble Sort':
+        onRandomize();
         await bubbleSort({
           array: randomizedArray,
           setArray: setRandomizedArray,
@@ -138,7 +141,7 @@ const Home = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '700px'}}>
       <HomeHeader
         algorithms={algorithms}
         onAlgorithmChange={setCurrentAlgorithm}
@@ -148,16 +151,25 @@ const Home = () => {
         onSpeedChange={onSpeedChange}
         onStart={onVisualize}
         isVisualizing={isVisualizing}
+        
       />
       <div
+      style={{backgroundColor:'white',
+      padding: '30px'}}/>
+      <div
         style={{
-          backgroundColor: '#0D1929',
+          //marginTop: '100px',
+          
+          backgroundColor: 'rgba(192,192,192)',
           display: 'flex',
-          height: '100%',
-          width: '100vw',
+          height: '50%',
+          width: '80%',
+          
+          margin: 'auto',
           flexDirection: 'row',
           alignItems: 'end',
-          padding: '0px 0px 0px 0px',
+          padding: '30px 0px 0px 0px',
+          color: 'orange'
         }}
       >
         {randomizedArray.map((item, index) => {
@@ -185,7 +197,8 @@ const Home = () => {
           );
         })}
       </div>
-    </div>
+      </div>
+
   );
 };
 

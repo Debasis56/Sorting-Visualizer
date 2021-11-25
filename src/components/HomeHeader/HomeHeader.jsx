@@ -6,6 +6,7 @@ import InputSizeSlider from './InputSizeSlider';
 import RandomizeButton from './RandomizeButton';
 import SpeedSlider from './SpeedSlider';
 import StartButton from './StartButton';
+import NightToggle from './NightToggle';
 import "./HomeHeader.css";
 
 const HomeHeader = ({
@@ -15,6 +16,7 @@ const HomeHeader = ({
   onSpeedChange,
   onInputSizeChanged,
   onRandomize,
+  
   onStart,
   isVisualizing,
 }) => {
@@ -25,12 +27,21 @@ const HomeHeader = ({
     window.location.reload(false);
   }
   return (
-    <Row
+    <Row className="important"
       style={{
-        background: 'white',
+        background: '#fff',
         color: 'white',
         padding: '10px 0px 10px 0px',
         width: '100%',
+        position: 'fixed',
+  
+    width: '100%',
+    boxShadow: '0 .5rem 1.5rem rgba(0,0,0,.2)',
+    display: 'flex',
+    
+   
+    height: '10rem',
+    
       }}
       align="middle"
       justify="space-around"
@@ -63,6 +74,7 @@ const HomeHeader = ({
       />
       <RandomizeButton onClick={onRandomize} />
       <StartButton onClick={onStart} />
+      <NightToggle/>
     </Row>
   );
 };

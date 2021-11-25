@@ -1,11 +1,12 @@
 import React from 'react';
 import {Button} from 'antd';
 import {RedoOutlined} from '@ant-design/icons';
-
+import "./RandomizeButton.css";
 const RandomizeButton = ({onClick}) => {
   return (
     <div style={{marginTop: 8}}>
       <Button
+      className="btn"
         type="primary"
         style={{
           width: 130,

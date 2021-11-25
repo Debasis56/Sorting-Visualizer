@@ -7,15 +7,18 @@ text-decoration: none;
 outline: none; border:none;
 text-transform: capitalize;
 transition: all .2s linear;
+
 }
+
 heading.logo
 {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     text-transform: capitalize;
-    font-size: 50px;
+    font-size: 3rem;
     color:var(--blue);
 }
 heading.logo:hover span{
     text-decoration: underline;
 }
+
