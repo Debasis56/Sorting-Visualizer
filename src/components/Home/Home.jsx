@@ -53,7 +53,7 @@ const Home = () => {
   };
   const onSpeedChange = (val) => {
     if (isVisualizing) return;
-    setVisualizationSpeed(val);
+    setVisualizationSpeed(100-val+1);
   };
 
   const onVisualize = async () => {
@@ -169,7 +169,7 @@ const Home = () => {
           flexDirection: 'row',
           alignItems: 'end',
           padding: '30px 0px 0px 0px',
-          color: 'orange'
+          color: 'orange'        
         }}
       >
         {randomizedArray.map((item, index) => {
