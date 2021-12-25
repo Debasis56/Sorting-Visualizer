@@ -6,11 +6,12 @@ import HomeHeader from '../HomeHeader/HomeHeader';
 import '../../index.css';
 import bubbleSort from '../../algorithms/bubble-sort';
 import insertionSort from '../../algorithms/insertion-sort';
-import inplaceMergeSortWrapper from '../../algorithms/inplace-merge-sort';
+//import inplaceMergeSortWrapper from '../../algorithms/inplace-merge-sort';
 import mergeSortWrapper from '../../algorithms/merge-sort';
 import quickSortLWrapper from '../../algorithms/quick-sort-l';
-import quickSortLRWrapper from '../../algorithms/quick-sort-lr';
+//import quickSortLRWrapper from '../../algorithms/quick-sort-lr';
 import StartButton from '../HomeHeader/StartButton';
+//import ColorKey from './ColorKey'
 import './Home.css'
 
 
@@ -30,10 +31,8 @@ const Home = () => {
     'Bubble Sort',
     'Insertion Sort',
     'Selection Sort',
-    'QuickSort (L)',
-    'QuickSort (LR)',
-    'Merge Sort',
-    'Inplace Merge Sort',
+    'QuickSort',
+    'Merge Sort'
   ];
 
   const onRandomize = () => {
@@ -55,6 +54,7 @@ const Home = () => {
     if (isVisualizing) return;
     setVisualizationSpeed(100-val+1);
   };
+
 
   const onVisualize = async () => {
     if (isVisualizing) return;
@@ -100,16 +100,6 @@ const Home = () => {
           setColorsArray: setColorsArray,
         });
         break;
-      case 'QuickSort (LR)':
-        await quickSortLRWrapper({
-          array: randomizedArray,
-          leftIndex: 0,
-          rightIndex: randomizedArray.length - 1,
-          setArray: setRandomizedArray,
-          visualizationSpeed: visualizationSpeed,
-          setColorsArray: setColorsArray,
-        });
-        break;
 
       case 'Merge Sort':
         await mergeSortWrapper({
@@ -122,16 +112,16 @@ const Home = () => {
         });
         break;
 
-      case 'Inplace Merge Sort':
-        await inplaceMergeSortWrapper({
-          array: randomizedArray,
-          leftIndex: 0,
-          rightIndex: randomizedArray.length - 1,
-          setArray: setRandomizedArray,
-          visualizationSpeed: visualizationSpeed,
-          setColorsArray: setColorsArray,
-        });
-        break;
+      // case 'Inplace Merge Sort':
+      //   await inplaceMergeSortWrapper({
+      //     array: randomizedArray,
+      //     leftIndex: 0,
+      //     rightIndex: randomizedArray.length - 1,
+      //     setArray: setRandomizedArray,
+      //     visualizationSpeed: visualizationSpeed,
+      //     setColorsArray: setColorsArray,
+      //   });
+      //   break;
 
       default:
         break;

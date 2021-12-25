@@ -27,6 +27,7 @@ const HomeHeader = ({
     window.location.reload(false);
   }
   return (
+    <div className>
     <Row className="important"
       style={{
         background: '#fff',
@@ -76,6 +77,8 @@ const HomeHeader = ({
       <StartButton onClick={onStart} />
       <NightToggle/>
     </Row>
+  
+    </div>
   );
 };
 export default HomeHeader;
