@@ -31,7 +31,7 @@ const Home = () => {
     'Bubble Sort',
     'Insertion Sort',
     'Selection Sort',
-    'QuickSort',
+    'QuickSort (L)',
     'Merge Sort'
   ];
 
